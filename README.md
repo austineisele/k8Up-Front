@@ -29,7 +29,7 @@ sudo chmod ./*
 ./create_kube_config
 ```
 
-###**Part 2: Node set ups**
+### Part 2: Node set ups**
 1. *Set up nodes*: Install the initial tools and configurations needed to install Kubernetes on all the nodes that you will be using for your cluster. This includes: 
 - CRI-O as the container runtime.
 - Kuberenetes tools: kubelet, kubeadm, and kubectl
