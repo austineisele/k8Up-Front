@@ -4,7 +4,8 @@ Scripts for setting up a Kubernetes cluster using configuration files.
 
 To use you must have kubeadm installed on an admin station
 
-##**To Use**##:
+###To Use###:
+
 ##**Part 1: kubeadm configuration**##
 We need to create the configuration values and certificates in order to pass to our control plane and workder nodes. To do this, we will be working on an admin station. Part 1 is *all* done on an admin station. ***Note***: If you plan on committing this to a repository, use something like transcrypt to encrypt any sensitive information. 
 
