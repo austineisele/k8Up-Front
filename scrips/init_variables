@@ -1,1 +1,52 @@
 #!/bin/bash
+# Interactively initiate variables for your kubernetes cluster that
+# will be used by kubeadm to initialize the cluster.
+#
+
+K8S_API_ENPOINT=my-api.mydomain.io
+K8S_API_ENDPOINT_INTERNAL=your-api-int.mydomain.io
+K8_API_ADVERTISE_IP=
+K8_VERSION=1.28.0
+K8_CLUSTER_NAME=mycluster
+OUTPUT_DIR=$(realapth -m ./_clusters/${K8_CLUSTER_NAME})
+LOCAL_CERTS_DIR=${OUTPUT_DIR}/pki
+KUBECONFIG=${OUTPUT_DIR}/kubeconfig
+
+#function to set the configuration variables
+set_configurations() {
+    return 1
+}
+
+#display the confirugations as requested
+confirm_configurations() {
+    printf 'These are the configurations you have requested:\n\n'
+    printf '    K8S_API_ENPOINT: %s\n' "$K8S_API_ENPOINT"
+}
+
+#function to export the current configs
+export_configurations() {
+    return 1
+}
+
+help() {
+	cat <<-EOF
+		NAME
+		     init_variables
+
+		SYNOPSIS
+		     init_variables [arguments...]
+
+		DESCRIPTION
+
+		     init_variables configures the required variables in order to initialize
+			 a kubeadm configuration of a Kuberentes cluster by setting environmental 
+             variables that will be added to configuration files.
+
+		ARGUMENTS
+		     -c, --cipher=CIPHER
+		            the symmetric cipher to utilize for encryption;
+		            defaults to aes-256-cbc
+
+		     -
+	EOF
+}
